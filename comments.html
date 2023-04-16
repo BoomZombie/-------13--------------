@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comments</title>
+    <style>
+        #ava {
+            width: 10vw;
+            height: 25vh;
+        }
+    </style>
+</head>
+<body>
+    <br>
+        <h1>Сервис комментариев</h1>
+        <h3>Оставьте, пожалуйста, ваш комментарий</h3>
+        <form>Показывать ваше имя?
+            <p>Да<input id="yes" type="checkbox" checked="checked"/></p>
+            <p>Нет<input id="no" type="checkbox"/></p>
+        </form>
+        <p>Введите фаше ФИО:</p>
+        <input id="fio" type="text" value=" "/>
+
+        <p>Введите ссылку вашего аватара:</p>
+        <input id="avatar" type="text" value="https://avatars.dzeninfra.ru/get-zen_doc/138668/pub_5bd954eb1aa96600aba0c481_5bd959368dd91d00aae120d9/scale_1200"/>
+
+        <p>Оставьте комментарий:</p>
+        <textarea  id="comment" type="text" value="My first viagra comment" rows="10" cols="50"></textarea></br>
+        <button onclick="onPost()" value="Отправить">Отправить</button>
+
+        <div>
+            <p>Чат<input  value=""/></p>
+            <img id="ava" src=""/>
+            <input id="updatedFio" class="result"/>
+            <input id="newComment" class="result" value=""/>
+            <input id="date" type="date"/>
+        </div>
+
+        <script>
+            let result = document.getElementsByClassName('result');
+                const updateNameValue = (str) => {
+                return str[0].toUpperCase() + str.toLowerCase().slice(1);
+            }
+
+            const onPost = () => {
+            let fio = document.getElementById('fio').value;
+            let fioArray = fio.split(' ');
+            let updatedFio = '';
+            fioArray.forEach((item)=>{
+                updatedFio = updateNameValue(item) + ' ' + updatedFio;
+            })
+            result[0].value = updatedFio;
+            if(updatedFio   ) {
+                updatedFio = userName;
+            }
+            
+            let comment = document.getElementById('comment').value;
+            let newComment = document.getElementById('newComment');
+            newComment.value = comment.replace("viagra", "***");
+
+            let avatar = document.getElementById('avatar').value;
+            document.getElementById('ava').src = avatar;
+            if(avatar != ....) {
+                src=${img\bear1.png}
+            }
+
+            let checkbox = document.getElementById('yes');
+            let checkbox2 = document.getElementById('no');
+            if(checkbox === yes) {
+                result updatedFio
+            } else {
+                updatedFio = userName;
+            }
+        }
+        </script>
+    </div>
+    </main>
+</body>
+</html>
